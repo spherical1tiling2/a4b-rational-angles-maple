@@ -1,4 +1,4 @@
-# Spherical Tilings: Maple Computations
+# a4b Rational Angles: Maple
 
 Maple programs, algebraic data, and current computation reports for edge-to-edge spherical tilings by almost equilateral pentagons with edge lengths $a^4b$.
 
