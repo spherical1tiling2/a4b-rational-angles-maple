@@ -1,0 +1,4 @@
+active_headings=231; three_vertex_headings=230; two_vertex_headings=1; expanded_records=257; issues=0
+active_headings=230; reference_polynomials=230; issues=0
+active_headings=231; three_vertex_headings=230; two_vertex_headings=1; expanded_records=257; issues=0
+PASS: counts, stable IDs, Case/Case. compatibility, duplicate/missing rejection, and output preservation.

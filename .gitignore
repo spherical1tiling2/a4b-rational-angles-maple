@@ -1,7 +1,5 @@
-__pycache__/
-*.py[cod]
-.venv/
-.DS_Store
+results-new/
+*.work/
+solution_range.mpl
 Thumbs.db
-*.log
-solution_audit_range.mpl
+.DS_Store

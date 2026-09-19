@@ -1,0 +1,4 @@
+case,f,angles_pi,residual,status,branch
+APP-010,12,"[4/9, 4/9, 2/3, 7/9, 1]",.13e-49,PASS,"sigma2--/R2;lift;k=0,0"
+APP-012-OR1,44,"[4/11, 4/11, 6/11, 9/11, 1]",.14e-49,PASS,"sigma2--/R1;lift;k=0,0"
+APP-012,44,"[4/11, 4/11, 6/11, 9/11, 1]",.14e-49,PASS,"sigma2--/R1;lift;k=0,0"

@@ -1,0 +1,5 @@
+case,f,angles_pi,residual,status,branch
+APP-223,20,"[2/5, 2/5, 4/5, 3/5, 1]",.3e-49,PASS,"sigma2+-/R6;lift;k=0,0"
+APP-223,20,"[2/5, 2/5, 4/5, 7/10, 9/10]",.1e-49,PASS,"sigma2--/R2;lift;k=0,0"
+APP-224,20,"[2/5, 2/5, 4/5, 3/5, 1]",.3e-49,PASS,"sigma2+-/R1;lift;k=0,0"
+APP-224,20,"[2/5, 2/5, 4/5, 7/10, 9/10]",.1e-49,PASS,"sigma2--/R1;lift;k=0,0"

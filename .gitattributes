@@ -1,8 +1,1 @@
-* text=auto
-*.m binary
-*.ggb binary
-*.png binary
-*.mpl text eol=lf
-*.py text eol=lf
-*.md text eol=lf
-*.json text eol=lf
+* -text

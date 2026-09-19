@@ -1,0 +1,2 @@
+COMPARISON expected=88 accepted=88 excluded=17 missing=0 extra=0 exact_checked=105
+PASS: all finite manuscript records agree after exact checks and the vertex degree bound.

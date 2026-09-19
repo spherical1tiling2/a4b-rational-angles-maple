@@ -1,0 +1,4 @@
+case,angles_pi_q_equals_1_over_f,even_f_min,vertex_exact,angle_sum_exact,equation_26_exact
+APP-011,"[4*q, 4*q, 1-2*q, 1-2*q, 1]",12,true,true,true
+APP-011-OR1,"[4*q, 4*q, 1-2*q, 1-2*q, 1]",12,true,true,true
+APP-202,"[8*q, 1-12*q, 1-4*q, 1/2+2*q, 1/2+10*q]",14,true,true,true

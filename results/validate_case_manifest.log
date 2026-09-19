@@ -1,0 +1,2 @@
+PASS: 257 distinct three-vertex records = 230 primary + 27 OR; one separate two-vertex case.
+PASS: all affine equations, primary reference coverage, transferred candidate, and APP-177 OR equivalence.

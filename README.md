@@ -1,55 +1,50 @@
-# a4b Rational Angles: Maple
+# Rational-angle spherical pentagons: Maple computations
 
-Maple programs, algebraic data, and current computation reports for edge-to-edge spherical tilings by almost equilateral pentagons with edge lengths $a^4b$.
+Programs and results for the 257 three-vertex combinations and the separate two-vertex case in the accompanying paper on spherical tilings by congruent pentagons with edge combination `a^4 b`.
 
-The accompanying constructions and figures are in [spherical-tilings-geogebra](https://github.com/m1i2p3u4/spherical-tilings-geogebra).
+The appendix contains 230 primary three-vertex headings and 27 alternative (`OR`) combinations: **257 + 1 = 258 distinct cases**. These are case records processed by shared Maple programs; the number of `.mpl` files is not the case count. Case identifiers are determined by the vertex combinations. APP-133 covers the repeated heading APP-158, and APP-177-OR1 is included.
 
 ## Contents
 
-| Directory | Contents |
-|---|---|
-| [cases_231](cases_231) | 257 three-vertex combinations (230 primary records and 27 OR branches), plus one separate two-vertex case |
-| [three_variable_demo](three_variable_demo) | A three-variable recursive-elimination example |
-| [four_variable_experiment](four_variable_experiment) | Four-variable extensions, intermediate results, and an experimental status report |
-| [rational_tetrahedra](rational_tetrahedra) | A separate Python prototype for rational dihedral angles of tetrahedra |
+- `cases/`: Maple programs, manuscript inputs, and extraction scripts.
+- `results/`: outputs, logs, input hashes, and execution metadata from the run described in [RUN_REPORT.md](RUN_REPORT.md).
+- `run_all.ps1`: execution and verification from empty working directories.
+- `computation-record.json` and `FILES.sha256`: reproducibility metadata and file checksums.
 
-The `.mpl` files contain Maple source. The `.m` files are Maple saved data and should be read with Maple. CSV files contain comparison results. Intermediate algebraic data are included to retain the archived computation state.
+All angles in the data files are measured in units of pi. Vertex vectors use the order `(alpha, beta, gamma, delta, epsilon)`. Phase vectors additionally use `q=1/f`.
 
-The manuscript case count is **257 + 1 = 258**; cases are stored in a batch manifest, not one Maple file per case. Names containing `231` are retained for compatibility. See [CASE_COUNT_CORRECTION.md](cases_231/CASE_COUNT_CORRECTION.md) for the duplicate removal, added OR branch, and historical-ID mapping.
+## Run
 
-## Running the Maple programs
+The included driver requires PowerShell 7 on Windows and a licensed Maple command-line installation. This release was run with Maple 2024.2.
 
-Use a local Maple installation. Set the working directory to the directory containing the selected entry point; internal file references are relative to that directory. For example, after changing into `cases_231`, run:
-
-```maple
-read "run_recursive_231_solution_audit.mpl":
+```powershell
+pwsh -File ./run_all.ps1 -Maple 'C:/Program Files/Maple 2024/bin.X86_64_WINDOWS/cmaple.exe' -OutputDirectory ./results-new
 ```
 
-The full audit can be expensive. For a smaller run, create `cases_231/solution_audit_range.mpl` with:
+Choose a directory that does not exist. The driver creates a separate working directory, runs all 257 three-vertex records, checks the 230 printed primary polynomials, verifies the parameter families and finite candidates, and calculates the two-vertex resultants and candidate checks. It stops if a required comparison fails. Four independent Maple processes are used by default, with one Maple CPU thread per search process; use `-Workers` to change the process count.
 
-```maple
-first_case := 1:
-last_case := 1:
+To check the inputs against a manuscript source as well:
+
+```powershell
+pwsh -File ./run_all.ps1 -OutputDirectory ./results-new -ManuscriptPath ./a4br.tex
 ```
 
-Remove that range file before a full run. Generated reports may overwrite reports in the working directory; use a separate checkout for new experiments. The PowerShell extraction scripts take the manuscript source as an explicit argument; the manuscript itself is not included.
+The manuscript source is not included. Its SHA-256 is recorded in `results/manuscript.sha256`. With `-ManuscriptPath`, the driver checks extraction, compares the three input datasets, and refuses to run if they differ.
 
-The demo entry point is `three_variable_demo/run_recursive_3variable_demo.mpl`. The four-variable experiments are described in [EXPERIMENT_STATUS.md](four_variable_experiment/EXPERIMENT_STATUS.md).
+## Euler bound
 
-## Python prototype
+The search applies the identity
 
-From the repository root, with Python 3.10 or later:
+`f = 12 + 2 * sum((k-3) * v_k, k >= 4)`.
 
-```sh
-python -m rational_tetrahedra audit
-python -m rational_tetrahedra search 12
-python -m unittest discover -s rational_tetrahedra/tests
-```
+Each required vertex type occurs at least once. For required types of degrees `d_1,d_2,d_3`, the program therefore requires
 
-The prototype uses the Python standard library.
+`f >= 12 + 2 * ((d_1-3) + (d_2-3) + (d_3-3))`.
 
-## Scope of the results
+In particular, any required vertex of degree at least four gives `f >= 14`. Cases with only degree-three vertices may still have `f=12`. Algebraic candidates rejected by this bound are recorded separately in `results/degree_bound_exclusions.csv`.
 
-The archived three-variable computation summary is [current_formula_solution_audit_v2.md](cases_231/current_formula_solution_audit_v2.md). Its 231-record run predates the case-count correction; it is not a new run of the corrected manifest. Intermediate Maple data required by the experiments remain available.
+## Verification scope
 
-The four-variable and tetrahedron programs are experimental. Their status reports distinguish verified candidates and families from unresolved completeness questions.
+The computations check the manuscript's listed angle candidates and symbolic equations. Finite candidates undergo exact vertex, angle-sum, and cyclotomic checks of equation (2.6), after the search's numerical screening. The two printed parameter families are checked symbolically.
+
+Factor logs retain `rank1_family` and `one_variable_factor` entries. The general classification of all positive-dimensional components and the geometric and combinatorial arguments for tiling existence remain part of the paper. The two-vertex program recalculates the 15 resultants and checks the four listed candidates; it does not independently enumerate all three-variable torsion points. See the run report for the precise results.

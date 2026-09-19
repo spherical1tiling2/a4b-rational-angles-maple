@@ -1,0 +1,98 @@
+[
+  {
+    "path": "cases/a4b_rational_core.mpl",
+    "sha256": "18dde8a5f106cce1e0e379e98e5cadbeddbfe17d5aa2ef24b541e4a8e9a2db59"
+  },
+  {
+    "path": "cases/appendix_3vertex_solution_candidates.txt",
+    "sha256": "30cd46b4546e3554ae574957a7cc62dfa10a3bfa0e532e7a4a0fcd755f1a897e"
+  },
+  {
+    "path": "cases/appendix_all_3vertex_cases.txt",
+    "sha256": "2e858aa4a83239306b89822bd9514769cbdecae6e7525a0d529a4c5fef239eee"
+  },
+  {
+    "path": "cases/appendix_case_ids.ps1",
+    "sha256": "5772df0b2b639e254929e155074bfdce63430e982c9414912c78d872e7d137c0"
+  },
+  {
+    "path": "cases/appendix_reference_polys_by_heading.mpl",
+    "sha256": "33e24bf242385b91125d337c140e2d49f021896b863041ed9fd13d2d2d58946e"
+  },
+  {
+    "path": "cases/canonical_phase_engine.mpl",
+    "sha256": "f024038b9717384d7c55d3bee2bb4c0edb55785a5d486c322b05449f16848df0"
+  },
+  {
+    "path": "cases/exact_angle_checks.mpl",
+    "sha256": "e2e3b9bc0e5b5f2ff80c2754a30270791657b044f406dbc5ac79bd797b81f483"
+  },
+  {
+    "path": "cases/extract_appendix_case_matrix.ps1",
+    "sha256": "b6ef02047cc3e45dc23a69ea7e466ad5973f53c1f8b36c7d614fc19aec5befab"
+  },
+  {
+    "path": "cases/extract_appendix_reference_polynomials.ps1",
+    "sha256": "d6a82215ea5b549a57558aac770e803dcccafd02799e5c18fd8de5e11a3c0bb5"
+  },
+  {
+    "path": "cases/extract_appendix_solutions.ps1",
+    "sha256": "92d1acd2048911fddae96f21afecf3167ffd16f330ae737cdc62bb68db923e75"
+  },
+  {
+    "path": "cases/phase_backsubstitution.mpl",
+    "sha256": "41877c5e2b44fc3ff2203488a20a93c588d6f03f9e917b2c73b9e1451885e586"
+  },
+  {
+    "path": "cases/recursive_torsion_engine.mpl",
+    "sha256": "7ce8298a586faf5415df76f6df61de76384195a5c5e11193a5a6a19a52680cfc"
+  },
+  {
+    "path": "cases/root_backsubstitution.mpl",
+    "sha256": "b1575ddcca494c7b08d035cc7e6f9bac389457d16dd85db00f02fb2e42a5b667"
+  },
+  {
+    "path": "cases/run_affine_models.mpl",
+    "sha256": "de36386714b6113130ff5022368513904abf92ef34ea7ca156825585b3b78033"
+  },
+  {
+    "path": "cases/run_parameter_families.mpl",
+    "sha256": "eeb4902b4d1295b3d9930b86b9ece143d97c8569f8c374279c6532449e565ac3"
+  },
+  {
+    "path": "cases/run_polynomial_comparison.mpl",
+    "sha256": "3ba43c23d093d258bdd003888e86ac6fbd9acbdecc521098c419a6de95ee767c"
+  },
+  {
+    "path": "cases/run_solution_search.mpl",
+    "sha256": "17646d7b873eeac5e5f506c1aba826cd327cd8aa2626e995af0ccb78bfc0aef1"
+  },
+  {
+    "path": "cases/run_two_vertex_case.mpl",
+    "sha256": "bb40384b94bb73e31b94bda016ebd29cf1e917df30f693c8903049865d2724e1"
+  },
+  {
+    "path": "cases/run_verified_comparison.mpl",
+    "sha256": "194156c325c83b044d331298239816e454b5a2e0741ef6c41e348be1da3faa84"
+  },
+  {
+    "path": "cases/support_lattice.mpl",
+    "sha256": "2f0f3f7da084badf6717d5ee4486784b40d6a651921de5c0a091912833eac8a8"
+  },
+  {
+    "path": "cases/test_case_extraction.ps1",
+    "sha256": "34401d36824aa6023191dabc16a80bfdd1e6814e0d6c1f133005d30f60ae3b34"
+  },
+  {
+    "path": "cases/trig_polynomial_engine.mpl",
+    "sha256": "ddfb20eb16efa3cf94f161918ee42d8e26c9d94cc3917be9995d3cb0872cc01b"
+  },
+  {
+    "path": "cases/unique_2vertex_case.txt",
+    "sha256": "87bcd454f46f924096247d30bdc16ca082842049d6f01250463d764fa2d98915"
+  },
+  {
+    "path": "cases/validate_case_manifest.mpl",
+    "sha256": "6d02d86e9bdce241ad5adb60c2a2ef676136f8134514f829f3660460e5e991b4"
+  }
+]

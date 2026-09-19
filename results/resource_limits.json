@@ -1,0 +1,7 @@
+{
+  "memory_capacity_bytes": 24841998336,
+  "soft_memory_bytes": 18631498752,
+  "hard_memory_bytes": 37262997504,
+  "disk_reserve_bytes": 51128880128,
+  "limit_source": "host_capacity"
+}

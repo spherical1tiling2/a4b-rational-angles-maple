@@ -1,0 +1,2 @@
+case,f,angles_pi,residual,status,branch
+APP-058,16,"[3/2, 1/4, 1/2, 1/4, 3/4]",0.,PASS,"sign--/R3;lift;k=0,0"

@@ -1,0 +1,5 @@
+case,f,angles_pi,polynomial_exact_zero,equation_26_exact_zero,selection
+B2V-1,20,"[2/5, 4/5, 2/5, 1, 3/5]",true,true,excluded_angle_order_lemma
+B2V-1,20,"[2/5, 4/5, 2/5, 9/10, 7/10]",true,true,excluded_angle_order_lemma
+B2V-1,20,"[8/5, 4/5, 2/5, 1/10, 3/10]",true,true,excluded_self_intersection_case
+B2V-1,20,"[2/3, 4/5, 2/5, 1/3, 1]",true,true,retained_manuscript_candidate

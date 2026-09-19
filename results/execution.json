@@ -1,0 +1,166 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-19T17:39:16.1116771Z",
+  "updated_utc": "2026-09-19T17:42:26.3720076Z",
+  "elapsed_seconds": 190.260921,
+  "peak_rss_bytes": 1027461120,
+  "measurement_scope": "search_process_trees",
+  "workers": 4,
+  "completed": [
+    {
+      "first": 17,
+      "last": 32,
+      "started_utc": "2026-09-19T17:39:23.3017952Z",
+      "finished_utc": "2026-09-19T17:39:41.8468184Z",
+      "seconds": 18.5450432,
+      "processed": 16,
+      "found": 10
+    },
+    {
+      "first": 49,
+      "last": 64,
+      "started_utc": "2026-09-19T17:39:23.3142222Z",
+      "finished_utc": "2026-09-19T17:39:57.6944748Z",
+      "seconds": 34.3802619,
+      "processed": 16,
+      "found": 3
+    },
+    {
+      "first": 33,
+      "last": 48,
+      "started_utc": "2026-09-19T17:39:23.3082042Z",
+      "finished_utc": "2026-09-19T17:40:13.6383699Z",
+      "seconds": 50.3301763,
+      "processed": 16,
+      "found": 8
+    },
+    {
+      "first": 97,
+      "last": 112,
+      "started_utc": "2026-09-19T17:40:15.6533789Z",
+      "finished_utc": "2026-09-19T17:40:25.0221552Z",
+      "seconds": 9.3687803,
+      "processed": 16,
+      "found": 0
+    },
+    {
+      "first": 65,
+      "last": 80,
+      "started_utc": "2026-09-19T17:39:43.8676055Z",
+      "finished_utc": "2026-09-19T17:40:34.0509520Z",
+      "seconds": 50.18335,
+      "processed": 16,
+      "found": 1
+    },
+    {
+      "first": 113,
+      "last": 128,
+      "started_utc": "2026-09-19T17:40:27.0302928Z",
+      "finished_utc": "2026-09-19T17:40:36.3539995Z",
+      "seconds": 9.3237108,
+      "processed": 16,
+      "found": 1
+    },
+    {
+      "first": 145,
+      "last": 160,
+      "started_utc": "2026-09-19T17:40:38.3576918Z",
+      "finished_utc": "2026-09-19T17:40:52.1911254Z",
+      "seconds": 13.8334387,
+      "processed": 16,
+      "found": 2
+    },
+    {
+      "first": 1,
+      "last": 16,
+      "started_utc": "2026-09-19T17:39:23.2747640Z",
+      "finished_utc": "2026-09-19T17:40:54.4717968Z",
+      "seconds": 91.197036,
+      "processed": 16,
+      "found": 3
+    },
+    {
+      "first": 161,
+      "last": 176,
+      "started_utc": "2026-09-19T17:40:54.1993179Z",
+      "finished_utc": "2026-09-19T17:41:03.5795174Z",
+      "seconds": 9.3802046,
+      "processed": 16,
+      "found": 9
+    },
+    {
+      "first": 129,
+      "last": 144,
+      "started_utc": "2026-09-19T17:40:36.0638124Z",
+      "finished_utc": "2026-09-19T17:41:05.8721793Z",
+      "seconds": 29.808371,
+      "processed": 16,
+      "found": 0
+    },
+    {
+      "first": 177,
+      "last": 192,
+      "started_utc": "2026-09-19T17:40:56.4740435Z",
+      "finished_utc": "2026-09-19T17:41:12.6280353Z",
+      "seconds": 16.1539955,
+      "processed": 16,
+      "found": 7
+    },
+    {
+      "first": 209,
+      "last": 224,
+      "started_utc": "2026-09-19T17:41:07.8754585Z",
+      "finished_utc": "2026-09-19T17:41:19.4909600Z",
+      "seconds": 11.6155047,
+      "processed": 16,
+      "found": 10
+    },
+    {
+      "first": 225,
+      "last": 240,
+      "started_utc": "2026-09-19T17:41:14.6393694Z",
+      "finished_utc": "2026-09-19T17:41:26.3252731Z",
+      "seconds": 11.6859083,
+      "processed": 16,
+      "found": 12
+    },
+    {
+      "first": 257,
+      "last": 257,
+      "started_utc": "2026-09-19T17:41:28.3324977Z",
+      "finished_utc": "2026-09-19T17:41:30.8385223Z",
+      "seconds": 2.5060275,
+      "processed": 1,
+      "found": 0
+    },
+    {
+      "first": 81,
+      "last": 96,
+      "started_utc": "2026-09-19T17:39:59.7013284Z",
+      "finished_utc": "2026-09-19T17:41:39.8218616Z",
+      "seconds": 100.1205375,
+      "processed": 16,
+      "found": 6
+    },
+    {
+      "first": 193,
+      "last": 208,
+      "started_utc": "2026-09-19T17:41:05.5920422Z",
+      "finished_utc": "2026-09-19T17:41:39.8473849Z",
+      "seconds": 34.2553461,
+      "processed": 16,
+      "found": 9
+    },
+    {
+      "first": 241,
+      "last": 256,
+      "started_utc": "2026-09-19T17:41:21.4981778Z",
+      "finished_utc": "2026-09-19T17:42:13.4722909Z",
+      "seconds": 51.9741178,
+      "processed": 16,
+      "found": 4
+    }
+  ],
+  "search_candidates": 85,
+  "degree_exclusions": 17
+}

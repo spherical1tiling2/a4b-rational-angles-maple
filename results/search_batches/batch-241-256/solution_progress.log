@@ -1,0 +1,179 @@
+START solution search
+CASE_BEGIN APP-215 raw_index=241 record=1
+MODEL_DONE APP-215 status=ok
+PHASE_DONE APP-215 N=28 D1=1 D2=7
+FACTORS_DONE APP-215 count=1
+FIELD_FACTORS_DONE APP-215 factor=1 count=3
+FACTOR_BEGIN APP-215 factor=1 variables=[Y]
+FACTOR_BEGIN APP-215 factor=2 variables=[Y]
+FACTOR_BEGIN APP-215 factor=3 variables=[X, Y]
+LATTICE_DONE APP-215 factor=3 status=reduced index=8 rank=2
+TREE_DONE APP-215 factor=3 branches=30
+BACKSUB_DONE APP-215 factor=3 candidates=0 accepted=0
+CASE_DONE APP-215 accepted_total=0
+CASE_BEGIN APP-216 raw_index=242 record=2
+MODEL_DONE APP-216 status=ok
+PHASE_DONE APP-216 N=16 D1=1 D2=1
+FACTORS_DONE APP-216 count=1
+FIELD_FACTORS_DONE APP-216 factor=1 count=1
+FACTOR_BEGIN APP-216 factor=1 variables=[X, Y]
+LATTICE_DONE APP-216 factor=1 status=reduced index=4 rank=2
+TREE_DONE APP-216 factor=1 branches=20
+BACKSUB_DONE APP-216 factor=1 candidates=0 accepted=0
+CASE_DONE APP-216 accepted_total=0
+CASE_BEGIN APP-217 raw_index=243 record=3
+MODEL_DONE APP-217 status=ok
+PHASE_DONE APP-217 N=16 D1=1 D2=2
+FACTORS_DONE APP-217 count=1
+FIELD_FACTORS_DONE APP-217 factor=1 count=9
+FACTOR_BEGIN APP-217 factor=1 variables=[Y]
+FACTOR_BEGIN APP-217 factor=2 variables=[X, Y]
+LATTICE_DONE APP-217 factor=2 status=reduced index=4 rank=2
+TREE_DONE APP-217 factor=2 branches=36
+BACKSUB_DONE APP-217 factor=2 candidates=0 accepted=0
+FACTOR_BEGIN APP-217 factor=3 variables=[Y]
+FACTOR_BEGIN APP-217 factor=4 variables=[Y]
+FACTOR_BEGIN APP-217 factor=5 variables=[Y]
+FACTOR_BEGIN APP-217 factor=6 variables=[Y]
+FACTOR_BEGIN APP-217 factor=7 variables=[Y]
+FACTOR_BEGIN APP-217 factor=8 variables=[Y]
+FACTOR_BEGIN APP-217 factor=9 variables=[Y]
+CASE_DONE APP-217 accepted_total=0
+CASE_BEGIN APP-218 raw_index=244 record=4
+MODEL_DONE APP-218 status=ok
+PHASE_DONE APP-218 N=40 D1=1 D2=1
+FACTORS_DONE APP-218 count=1
+FIELD_FACTORS_DONE APP-218 factor=1 count=1
+FACTOR_BEGIN APP-218 factor=1 variables=[X, Y]
+LATTICE_DONE APP-218 factor=1 status=reduced index=4 rank=2
+TREE_DONE APP-218 factor=1 branches=34
+BACKSUB_DONE APP-218 factor=1 candidates=0 accepted=0
+CASE_DONE APP-218 accepted_total=0
+CASE_BEGIN APP-219 raw_index=245 record=5
+MODEL_DONE APP-219 status=ok
+PHASE_DONE APP-219 N=10 D1=1 D2=5
+FACTORS_DONE APP-219 count=1
+FIELD_FACTORS_DONE APP-219 factor=1 count=2
+FACTOR_BEGIN APP-219 factor=1 variables=[X, Y]
+LATTICE_DONE APP-219 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-219 factor=1 branches=21
+BACKSUB_DONE APP-219 factor=1 candidates=0 accepted=0
+FACTOR_BEGIN APP-219 factor=2 variables=[Y]
+CASE_DONE APP-219 accepted_total=0
+CASE_BEGIN APP-220 raw_index=246 record=6
+MODEL_DONE APP-220 status=ok
+PHASE_DONE APP-220 N=6 D1=1 D2=1
+FACTORS_DONE APP-220 count=1
+FIELD_FACTORS_DONE APP-220 factor=1 count=1
+FACTOR_BEGIN APP-220 factor=1 variables=[X, Y]
+LATTICE_DONE APP-220 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-220 factor=1 branches=20
+BACKSUB_DONE APP-220 factor=1 candidates=0 accepted=0
+CASE_DONE APP-220 accepted_total=0
+CASE_BEGIN APP-221 raw_index=247 record=7
+MODEL_DONE APP-221 status=ok
+PHASE_DONE APP-221 N=10 D1=1 D2=5
+FACTORS_DONE APP-221 count=2
+FIELD_FACTORS_DONE APP-221 factor=1 count=1
+FACTOR_BEGIN APP-221 factor=1 variables=[Y]
+FIELD_FACTORS_DONE APP-221 factor=2 count=1
+FACTOR_BEGIN APP-221 factor=2 variables=[X, Y]
+LATTICE_DONE APP-221 factor=2 status=reduced index=8 rank=2
+TREE_DONE APP-221 factor=2 branches=20
+BACKSUB_DONE APP-221 factor=2 candidates=0 accepted=0
+CASE_DONE APP-221 accepted_total=0
+CASE_BEGIN APP-222 raw_index=248 record=8
+MODEL_DONE APP-222 status=ok
+PHASE_DONE APP-222 N=4 D1=1 D2=1
+FACTORS_DONE APP-222 count=1
+FIELD_FACTORS_DONE APP-222 factor=1 count=1
+FACTOR_BEGIN APP-222 factor=1 variables=[X, Y]
+LATTICE_DONE APP-222 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-222 factor=1 branches=22
+BACKSUB_DONE APP-222 factor=1 candidates=0 accepted=0
+CASE_DONE APP-222 accepted_total=0
+CASE_BEGIN APP-223 raw_index=249 record=9
+MODEL_DONE APP-223 status=ok
+PHASE_DONE APP-223 N=4 D1=1 D2=1
+FACTORS_DONE APP-223 count=1
+FIELD_FACTORS_DONE APP-223 factor=1 count=2
+FACTOR_BEGIN APP-223 factor=1 variables=[Y]
+FACTOR_BEGIN APP-223 factor=2 variables=[X, Y]
+NORM_DONE APP-223 factor=2 degree=8,96
+LATTICE_DONE APP-223 factor=2 status=reduced index=8 rank=2
+TREE_DONE APP-223 factor=2 branches=23
+BACKSUB_DONE APP-223 factor=2 candidates=2 accepted=2
+CASE_DONE APP-223 accepted_total=2
+CASE_BEGIN APP-224 raw_index=250 record=10
+MODEL_DONE APP-224 status=ok
+PHASE_DONE APP-224 N=10 D1=1 D2=1
+FACTORS_DONE APP-224 count=1
+FIELD_FACTORS_DONE APP-224 factor=1 count=1
+FACTOR_BEGIN APP-224 factor=1 variables=[X, Y]
+LATTICE_DONE APP-224 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-224 factor=1 branches=17
+BACKSUB_DONE APP-224 factor=1 candidates=2 accepted=2
+CASE_DONE APP-224 accepted_total=4
+CASE_BEGIN APP-225 raw_index=251 record=11
+MODEL_DONE APP-225 status=ok
+PHASE_DONE APP-225 N=24 D1=1 D2=1
+FACTORS_DONE APP-225 count=1
+FIELD_FACTORS_DONE APP-225 factor=1 count=1
+FACTOR_BEGIN APP-225 factor=1 variables=[X, Y]
+LATTICE_DONE APP-225 factor=1 status=reduced index=4 rank=2
+TREE_DONE APP-225 factor=1 branches=34
+BACKSUB_DONE APP-225 factor=1 candidates=0 accepted=0
+CASE_DONE APP-225 accepted_total=4
+CASE_BEGIN APP-226 raw_index=252 record=12
+MODEL_DONE APP-226 status=ok
+PHASE_DONE APP-226 N=12 D1=1 D2=1
+FACTORS_DONE APP-226 count=1
+FIELD_FACTORS_DONE APP-226 factor=1 count=1
+FACTOR_BEGIN APP-226 factor=1 variables=[X, Y]
+LATTICE_DONE APP-226 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-226 factor=1 branches=13
+BACKSUB_DONE APP-226 factor=1 candidates=0 accepted=0
+CASE_DONE APP-226 accepted_total=4
+CASE_BEGIN APP-227 raw_index=253 record=13
+MODEL_DONE APP-227 status=ok
+PHASE_DONE APP-227 N=6 D1=1 D2=1
+FACTORS_DONE APP-227 count=1
+FIELD_FACTORS_DONE APP-227 factor=1 count=1
+FACTOR_BEGIN APP-227 factor=1 variables=[X, Y]
+LATTICE_DONE APP-227 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-227 factor=1 branches=20
+BACKSUB_DONE APP-227 factor=1 candidates=0 accepted=0
+CASE_DONE APP-227 accepted_total=4
+CASE_BEGIN APP-228 raw_index=254 record=14
+MODEL_DONE APP-228 status=ok
+PHASE_DONE APP-228 N=12 D1=1 D2=1
+FACTORS_DONE APP-228 count=1
+FIELD_FACTORS_DONE APP-228 factor=1 count=1
+FACTOR_BEGIN APP-228 factor=1 variables=[X, Y]
+LATTICE_DONE APP-228 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-228 factor=1 branches=17
+BACKSUB_DONE APP-228 factor=1 candidates=0 accepted=0
+CASE_DONE APP-228 accepted_total=4
+CASE_BEGIN APP-229 raw_index=255 record=15
+MODEL_DONE APP-229 status=ok
+PHASE_DONE APP-229 N=12 D1=2 D2=2
+FACTORS_DONE APP-229 count=2
+FIELD_FACTORS_DONE APP-229 factor=1 count=1
+FACTOR_BEGIN APP-229 factor=1 variables=[X, Y]
+LATTICE_DONE APP-229 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-229 factor=1 branches=21
+BACKSUB_DONE APP-229 factor=1 candidates=0 accepted=0
+FIELD_FACTORS_DONE APP-229 factor=2 count=0
+CASE_DONE APP-229 accepted_total=4
+CASE_BEGIN APP-230 raw_index=256 record=16
+MODEL_DONE APP-230 status=ok
+PHASE_DONE APP-230 N=18 D1=2 D2=2
+FACTORS_DONE APP-230 count=3
+FIELD_FACTORS_DONE APP-230 factor=1 count=0
+FIELD_FACTORS_DONE APP-230 factor=2 count=0
+FIELD_FACTORS_DONE APP-230 factor=3 count=1
+FACTOR_BEGIN APP-230 factor=1 variables=[X, Y]
+LATTICE_DONE APP-230 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-230 factor=1 branches=13
+BACKSUB_DONE APP-230 factor=1 candidates=0 accepted=0
+CASE_DONE APP-230 accepted_total=4

@@ -1,0 +1,13 @@
+START solution search
+CASE_BEGIN APP-231 raw_index=257 record=1
+MODEL_DONE APP-231 status=ok
+PHASE_DONE APP-231 N=30 D1=2 D2=2
+FACTORS_DONE APP-231 count=3
+FIELD_FACTORS_DONE APP-231 factor=1 count=0
+FIELD_FACTORS_DONE APP-231 factor=2 count=1
+FACTOR_BEGIN APP-231 factor=1 variables=[X, Y]
+LATTICE_DONE APP-231 factor=1 status=reduced index=8 rank=2
+TREE_DONE APP-231 factor=1 branches=13
+BACKSUB_DONE APP-231 factor=1 candidates=0 accepted=0
+FIELD_FACTORS_DONE APP-231 factor=3 count=0
+CASE_DONE APP-231 accepted_total=0
