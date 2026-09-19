@@ -5,7 +5,7 @@
 - `canonical_phase_engine.mpl`: converts the affine angle model to integral-exponent canonical phase variables. It handles half-integer printed exponents by using `X=exp(i*pi*u1/D1)` and `Y=exp(i*pi*u2/D2)`.
 - `recursive_torsion_engine.mpl`: factor-by-factor sign/square transformations, resultants, cyclotomic coefficient norm, gcd diagnostics, and recursive 2D/3D reduction.
 - `phase_backsubstitution.mpl`: restores phase lifts and the affine angle variables after roots of unity have been found.
-- `run_recursive_231.mpl`: runs the recursive tree over the 231 primary three-variable-vertex cases. It writes `recursive_231_tree.log` and `recursive_231_phase_maps.log`.
+- `run_recursive_231.mpl`: runs the recursive tree over the 230 primary cases in the corrected manifest, skipping its 27 OR branches. Its historical filename is retained. It writes `recursive_231_tree.log` and `recursive_231_phase_maps.log`.
 - `run_recursive_3variable_demo.mpl`: demonstrates the 3-variable route: 15 branches from 3D to 2D, then 7 branches per 2D factor. After a candidate `x` (hence a candidate `f`) is found, set `_candidate_x` and run the remaining 2-variable tree in `(u,w)`; these remain two independent angle variables.
 
 ## Mathematical order

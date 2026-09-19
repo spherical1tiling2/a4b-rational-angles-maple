@@ -2,8 +2,14 @@ param(
     [Parameter(Mandatory=$true)]
     [string]$TexPath,
     [string]$MatrixPath = (Join-Path $PSScriptRoot 'appendix_all_3vertex_cases.txt'),
-    [string]$IssuePath = (Join-Path $PSScriptRoot 'appendix_case_extraction_issues.txt')
+    [string]$IssuePath = (Join-Path $PSScriptRoot 'appendix_case_extraction_issues.txt'),
+    [string]$IdReferencePath = (Join-Path $PSScriptRoot 'appendix_all_3vertex_cases.txt')
 )
+
+$ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'appendix_case_ids.ps1')
+$caseIds = Read-AppendixCaseIds $IdReferencePath
+$seenIds = @{}
 
 function Convert-PhaseVector([string]$Expr) {
     # Convert a heading exponent such as
@@ -90,20 +96,19 @@ $rows = New-Object System.Collections.Generic.List[string]
 $issues = New-Object System.Collections.Generic.List[string]
 $headingNo = 0
 $recordNo = 0
+$twoVertexCount = 0
 $lines = Get-Content -LiteralPath $TexPath
 
 foreach ($line in $lines) {
     # Lines beginning with %% are intentionally disabled cases in the TeX source.
-    if ($line -match '^\s*%%') { continue }
-    if ($line -notmatch '\\subsubsection\*\{Case ') { continue }
+    if ($line -match '^\s*%') { continue }
+    if ($line -notmatch '^\s*\\subsubsection\*\{Case\.?\s') { continue }
     $line = Remove-TeXWrappers $line
     $headingNo++
     try {
-        $marker = 'Case $\{'
-        $start = $line.IndexOf($marker)
-        $end = if ($start -ge 0) { $line.IndexOf('\}$,', $start + $marker.Length) } else { -1 }
-        if ($start -lt 0 -or $end -lt 0) { throw 'no heading boundary' }
-        $body = $line.Substring($start + $marker.Length, $end - ($start + $marker.Length))
+        $heading = Get-AppendixHeading $line $caseIds
+        if ($heading.VertexCount -eq 2) { $twoVertexCount++; continue }
+        $body = $heading.Body
 
         $phaseStart = $line.IndexOf(', $(')
         if ($phaseStart -lt 0) { throw 'no phase basis' }
@@ -132,8 +137,11 @@ foreach ($line in $lines) {
         $branch = 0
         foreach ($vv in $variants) {
             $recordNo++
-            $suffix = if ($branch -eq 0) { '' } else { '-OR' + $branch }
-            $id = 'APP-{0:D3}{1}' -f $headingNo,$suffix
+            $key = Get-AppendixVertexKey $vv
+            if (-not $caseIds.ContainsKey($key)) { throw "Unknown variant for $($heading.Id); update the reference matrix first" }
+            $id = $caseIds[$key]
+            if ($seenIds.ContainsKey($id)) { throw "Duplicate heading or variant: $id" }
+            $seenIds[$id] = $true
             $rows.Add(('  ["{0}", {1}, {2}, {3}]' -f $id,$vv,$xvec,$yvec))
             $branch++
         }
@@ -143,16 +151,23 @@ foreach ($line in $lines) {
     }
 }
 
+foreach ($id in $caseIds.Values) {
+    if (-not $seenIds.ContainsKey($id)) { $issues.Add("MISSING`t$id") }
+}
+Set-Content -LiteralPath $IssuePath -Value $issues -Encoding ASCII
+if ($issues.Count -gt 0) { throw "Extraction failed with $($issues.Count) issues; matrix was not overwritten. See $IssuePath" }
+
 $header = @(
     '# Auto-extracted from active Appendix case headings.',
     '# Each record is [case_id, three 5D vertex vectors, x phase vector, y phase vector].',
     '# Phase vectors use normalized variables (a,b,c,d,e,q), with q=1/f.',
+    '# Stable historical IDs; APP-158 was merged into APP-133.',
     'appendix_all_3vertex_cases := ['
 )
 $footer = @(']:')
-$content = $header + (($rows -join ",`n") + "`n") + $footer
+$content = $header + ((($rows | Sort-Object) -join ",`n") + "`n") + $footer
 # Maple's command-line reader on Windows rejects the UTF-8 BOM emitted by
 # Windows PowerShell's UTF8 mode, so these ASCII-only files are BOM-free.
 Set-Content -LiteralPath $MatrixPath -Value $content -Encoding ASCII
 Set-Content -LiteralPath $IssuePath -Value $issues -Encoding ASCII
-Write-Output ("active_headings={0}; expanded_records={1}; issues={2}" -f $headingNo,$rows.Count,$issues.Count)
+Write-Output ("active_headings={0}; three_vertex_headings={1}; two_vertex_headings={2}; expanded_records={3}; issues={4}" -f $headingNo,($headingNo-$twoVertexCount),$twoVertexCount,$rows.Count,$issues.Count)

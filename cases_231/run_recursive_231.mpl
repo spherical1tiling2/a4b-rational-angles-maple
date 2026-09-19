@@ -6,7 +6,7 @@ read "recursive_torsion_engine.mpl":
 read "phase_backsubstitution.mpl":
 read "appendix_all_3vertex_cases.txt":
 
-# Recursive exact-elimination audit for the 231 primary cases.
+# Recursive exact-elimination audit for the 230 primary cases; legacy filename.
 # Each factor is handled separately.  The coefficient-field norm is taken
 # only after each resultant, avoiding degree blow-up before elimination.
 first_case := 1:

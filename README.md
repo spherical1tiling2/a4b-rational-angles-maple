@@ -8,12 +8,14 @@ The accompanying constructions and figures are in [spherical-tilings-geogebra](h
 
 | Directory | Contents |
 |---|---|
-| [cases_231](cases_231) | Affine angle models, Laurent polynomials, recursive root-of-unity elimination, and appendix comparisons for 231 primary cases |
+| [cases_231](cases_231) | 257 three-vertex combinations (230 primary records and 27 OR branches), plus one separate two-vertex case |
 | [three_variable_demo](three_variable_demo) | A three-variable recursive-elimination example |
 | [four_variable_experiment](four_variable_experiment) | Four-variable extensions, intermediate results, and an experimental status report |
 | [rational_tetrahedra](rational_tetrahedra) | A separate Python prototype for rational dihedral angles of tetrahedra |
 
 The `.mpl` files contain Maple source. The `.m` files are Maple saved data and should be read with Maple. CSV files contain comparison results. Intermediate algebraic data are included to retain the archived computation state.
+
+The manuscript case count is **257 + 1 = 258**; cases are stored in a batch manifest, not one Maple file per case. Names containing `231` are retained for compatibility. See [CASE_COUNT_CORRECTION.md](cases_231/CASE_COUNT_CORRECTION.md) for the duplicate removal, added OR branch, and historical-ID mapping.
 
 ## Running the Maple programs
 
@@ -48,6 +50,6 @@ The prototype uses the Python standard library.
 
 ## Scope of the results
 
-The current three-variable summary is [current_formula_solution_audit_v2.md](cases_231/current_formula_solution_audit_v2.md). Superseded comparison reports and obsolete result tables are omitted. Intermediate Maple data required by the experiments remain available.
+The archived three-variable computation summary is [current_formula_solution_audit_v2.md](cases_231/current_formula_solution_audit_v2.md). Its 231-record run predates the case-count correction; it is not a new run of the corrected manifest. Intermediate Maple data required by the experiments remain available.
 
 The four-variable and tetrahedron programs are experimental. Their status reports distinguish verified candidates and families from unresolved completeness questions.

@@ -1,5 +1,7 @@
 # Formula and solution audit: version 2
 
+> Historical computation report: this run predates the case-count correction. The active manifest has 230 primary records and 27 OR branches, plus a separate two-vertex case. APP-158 was an exact duplicate of APP-133 and is retired; APP-177-OR1 was added. The original CSV files retain their original IDs and counts. Read archived APP-158 results as APP-133. This is not a fresh full recursive run of the corrected manifest. See [CASE_COUNT_CORRECTION.md](CASE_COUNT_CORRECTION.md).
+
 This report summarizes the current supplied results. It concerns the 231 primary three-variable cases. The four-variable, five-variable, and six-angle experiments are separate from the manuscript classification.
 
 ## Formulas

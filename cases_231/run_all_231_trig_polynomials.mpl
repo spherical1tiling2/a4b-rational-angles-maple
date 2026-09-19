@@ -4,6 +4,8 @@ read "a4b_rational_core.mpl":
 read "trig_polynomial_engine.mpl":
 read "appendix_all_3vertex_cases.txt":
 read "appendix_reference_polys_by_heading.mpl":
+refByID := table():
+for rr in appendix_reference_polys_by_heading do refByID[rr[1]] := rr[2] end do:
 
 logname := "appendix_231_trig_generation.log":
 lf := fopen(logname,WRITE):
@@ -29,7 +31,7 @@ for row in appendix_all_3vertex_cases do
             fprintf(lf,"%s,free_coordinate_fallback,%a,%d,D1=%a;D2=%a\n",id,T["kind"],nops([op(expand(F["polynomial"]))]),F["D1"],F["D2"]):
         else
             P := `a4b_solver/PhasePolynomial`(T,row[3],row[4]):
-            fprintf(lf,"%s,ok,%a,%d,%a\n",id,T["kind"],nops([op(expand(P))]),assigned(appendix_reference_polys_by_heading[count])):
+            fprintf(lf,"%s,ok,%a,%d,%a\n",id,T["kind"],nops([op(expand(P))]),assigned(refByID[id])):
         end if:
     end if:
 end do:

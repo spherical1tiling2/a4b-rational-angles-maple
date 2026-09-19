@@ -2,8 +2,14 @@ param(
     [Parameter(Mandatory=$true)]
     [string]$TexPath,
     [string]$OutputPath = (Join-Path $PSScriptRoot 'appendix_reference_polys_by_heading.mpl'),
-    [string]$IssuePath = (Join-Path $PSScriptRoot 'appendix_reference_polynomial_issues.txt')
+    [string]$IssuePath = (Join-Path $PSScriptRoot 'appendix_reference_polynomial_issues.txt'),
+    [string]$IdReferencePath = (Join-Path $PSScriptRoot 'appendix_all_3vertex_cases.txt')
 )
+
+$ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'appendix_case_ids.ps1')
+$caseIds = Read-AppendixCaseIds $IdReferencePath
+$seenIds = @{}
 
 function Remove-TeXWrappers([string]$Text) {
     $result = $Text
@@ -37,8 +43,13 @@ $headingNo = 0
 
 for ($i=0; $i -lt $lines.Count; $i++) {
     $line = $lines[$i]
-    if ($line -match '^\s*%%') { continue }
-    if ($line -notmatch '^\\subsubsection\*\{Case ') { continue }
+    if ($line -match '^\s*%') { continue }
+    if ($line -notmatch '^\s*\\subsubsection\*\{Case\.?\s') { continue }
+    $heading = Get-AppendixHeading (Remove-TeXWrappers $line) $caseIds
+    if ($heading.VertexCount -eq 2) { continue }
+    $id = $heading.Id
+    if ($seenIds.ContainsKey($id)) { throw "Duplicate primary heading: $id" }
+    $seenIds[$id] = $true
     $headingNo++
     $eqLine = $null
     for ($j=$i+1; $j -lt [math]::Min($i+12,$lines.Count); $j++) {
@@ -83,9 +94,14 @@ for ($i=0; $i -lt $lines.Count; $i++) {
     $expr = [regex]::Replace($expr, '([0-9])([xy])', '$1*$2')
     $expr = [regex]::Replace($expr, '([0-9])(?=zeta)', '$1*')
     # TeX uses juxtaposition for products, which Maple also accepts.
-    $id = 'APP-{0:D3}' -f $headingNo
     $rows.Add(('  ["{0}", {1}]' -f $id,$expr))
 }
+
+foreach ($id in $caseIds.Values) {
+    if ($id -notmatch '-OR' -and -not $seenIds.ContainsKey($id)) { $issues.Add("MISSING`t$id") }
+}
+Set-Content -LiteralPath $IssuePath -Value $issues -Encoding ASCII
+if ($issues.Count -gt 0) { throw "Extraction failed with $($issues.Count) issues; polynomials were not overwritten. See $IssuePath" }
 
 $content = @(
     '# Reference polynomials copied from the active Appendix equations.',
@@ -97,7 +113,7 @@ $content = @(
     'zeta15 := exp(2*Pi*I/15): zeta20 := exp(2*Pi*I/20):',
     'appendix_reference_polys_by_heading := ['
 )
-$content += (($rows -join ",`n") + "`n")
+$content += ((($rows | Sort-Object) -join ",`n") + "`n")
 $content += ']: '
 Set-Content -LiteralPath $OutputPath -Value $content -Encoding ASCII
 Set-Content -LiteralPath $IssuePath -Value $issues -Encoding ASCII

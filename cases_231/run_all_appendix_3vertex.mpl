@@ -6,7 +6,7 @@ logname := "appendix_all_3vertex_affine.log":
 interface(errorbreak=0):
 logfile := fopen(logname,WRITE):
 fprintf(logfile,"A4BR appendix batch; equation (2.6) reserved for the trigonometric stage only.\n"):
-fprintf(logfile,"primary appendix headings = %d\n",nops(appendix_all_3vertex_cases)):
+fprintf(logfile,"expanded three-vertex records (including OR branches) = %d\n",nops(appendix_all_3vertex_cases)):
 fprintf(logfile,"case,status,kind,vertex_rank,extended_rank,affine_dimension\n"):
 
 okcount := 0: badcount := 0:

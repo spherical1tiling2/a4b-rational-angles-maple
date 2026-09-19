@@ -163,7 +163,6 @@ appendix_reference_polys_by_heading := [
   ["APP-155", x*y^17+x*y^16+y^17-x*y^15-2*y^15-2*x*y^13-y^14+x^2*y^11-x*y^12+y^13+2*x*y^11-x*y^10-x*y^9+2*y^10-2*x^2*y^7+x*y^8+x*y^7-2*x*y^6-x^2*y^4+x*y^5-y^6+x^2*y^3+2*x*y^4+2*x^2*y^2+x*y^2-x^2-x*y-x],
   ["APP-156", x^5*y^2-(zeta5^3-zeta5+1)*x^4*y^3-2*x^4*y-(zeta5^4-zeta5^3-zeta5^2+2*zeta5-2)*x^3*y^2+(zeta5^4+zeta5^2+zeta5-2)*x^2*y^3+(zeta5^3-2*zeta5^2+zeta5+1)*x^3+(zeta5^4-zeta5^3+2*zeta5^2-2*zeta5+1)*x^2*y-2*zeta5^2*x*y^2-(zeta5^4+zeta5^2-zeta5)*x+zeta5^2*y],
   ["APP-157", x^2*y^21-x^2*y^20-2*x^2*y^19-x*y^19+x^2*y^17+x*y^18+x*y^17+2*x^2*y^14-x*y^15-x*y^14+2*x*y^13-x*y^12+y^13-2*x*y^11+2*x*y^10-x^2*y^8+x*y^9-2*x*y^8+x*y^7+x*y^6-2*y^7-x*y^4-x*y^3-y^4+x*y^2+2*y^2+y-1],
-  ["APP-158", zeta4*x^2*y^9-2*zeta4*x*y^9-zeta4*x^2*y^7+2*x^2*y^6-zeta4*x*y^7+y^8-zeta4*x^2*y^5+zeta4*x*y^5+x*y^4-y^4+zeta4*x^2*y-x*y^2+2*zeta4*y^3-y^2-2*x+1],
   ["APP-159", (y+1)*(x*y^12-x*y^11+y^12-2*y^11+3*x*y^9+y^10-x^2*y^7-5*x*y^8-y^9+2*x^2*y^6+5*x*y^7+2*y^8-3*x^2*y^5-4*x*y^6-3*y^7+2*x^2*y^4+5*x*y^5+2*y^6-x^2*y^3-5*x*y^4-y^5+x^2*y^2+3*x*y^3-2*x^2*y+x^2-x*y+x)],
   ["APP-160", (x+1)*(x^2*y^5-x^3*y^3+x^2*y^4-x^2*y^3-x*y^2+x*y-y^2+x)],
   ["APP-161", x^2*y^15-x^2*y^14-2*x^2*y^13-x*y^13+x^2*y^11+x*y^12+2*x^2*y^10-x*y^10+2*x*y^9+x*y^8+y^9-x^2*y^6-x*y^7-2*x*y^6+x*y^5-2*y^5-x*y^3-y^4+x*y^2+2*y^2+y-1],

@@ -14,10 +14,8 @@ tol := 10^(-28):
 if FileTools:-Exists("solution_audit_range.mpl") then
   read "solution_audit_range.mpl":
 end if:
-if last_case>257 then
-  # The appendix source has a trailing empty selector after raw index 257;
-  # it is not a case and must not be indexed.
-  last_case:=257:
+if last_case>nops(appendix_all_3vertex_cases) then
+  last_case:=nops(appendix_all_3vertex_cases):
 end if:
 
 R26 := proc(aa,bb,cc,dd,ee)
@@ -89,7 +87,7 @@ Progress := proc(msg)
   fclose(lp):
 end proc:
 Progress("START full audit"):
-normCaseIDs := ["APP-019","APP-021","APP-048","APP-083","APP-084","APP-158",
+normCaseIDs := ["APP-019","APP-021","APP-048","APP-083","APP-084","APP-133",
                 "APP-184","APP-197","APP-200","APP-202","APP-210","APP-223"]:
 reduceBeforeNorm := false:
 
